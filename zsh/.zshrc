@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias layout-us='setxkbmap -layout us -variant altgr-intl'
-alias layout-pt='setxkbmap -layout pt'
+alias us='setxkbmap -layout us -variant altgr-intl'
+alias pt='setxkbmap -layout pt'
 neofetch
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
