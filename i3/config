@@ -77,6 +77,10 @@ bindsym $mod+p exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 # start rofi powermenu
 bindsym $mod+i exec --no-startup-id ~/.config/rofi/powermenu/type-3/powermenu.sh
 
+# brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+
 # start rofi quicklins
 # bindsym $mod+o exec --no-startup-id ~/.config/rofi/applets/bin/quicklinks.sh
 
@@ -158,13 +162,28 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+set $terminal "1"
+set $google "2"
+set $discord "3"
+set $vscode "4"
+set $Intellij "5"
+set $spotify "6"
+
+assign [class="Alacritty|alacritty"] → $terminal
+assign [class="Google-chrome|google-chrome"] → $google
+assign [class="Brave|brave"] → $google
+assign [class="Discord|discord"] → $discord
+assign [class="Code|code"] → $vscode
+assign [class="Intellij-idea-ultimate-edition|jetbrains-idea"] → $Intellij
+assign [class="Spotify|spotify"] → $spotify
+
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
+bindsym $mod+1 workspace number $terminal
+bindsym $mod+2 workspace number $google
+bindsym $mod+3 workspace number $discord
+bindsym $mod+4 workspace number $vscode
+bindsym $mod+5 workspace number $Intellij
+bindsym $mod+6 workspace number $spotify
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
